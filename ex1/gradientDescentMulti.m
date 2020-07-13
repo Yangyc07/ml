@@ -16,12 +16,8 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCostMulti) and gradient here.
     %
-    mu = theta; %保持theta的同时更新
-    for i = 1:length(theta),
-      prediction =  X * mu;
-      temp = sum((prediction - y)' * X(:,i));
-      theta(i) = mu(i) - alpha * temp / m;
-    end
+    temp = (alpha * (1 / m)) * (X' * ((X * theta) - y));
+    theta = theta - temp;
     % ============================================================
 
     % Save the cost J in every iteration    

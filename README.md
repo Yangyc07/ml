@@ -5,3 +5,4 @@ ex2 逻辑回归
 ex3/4 神经网络  
 ex5 偏置与方差  
 ex6 svm
+ex7 pca  
